@@ -14,8 +14,9 @@ test('Login with valid credentials', async ({ page }) => {
     ).toBeVisible();
 
     await loginPage.login(
-        'abhinavtest1@gmail.com',
-        'Siddhu@12345'
+        process.env.EMAIL,
+        process.env.PASSWORD
+        
     );
 
     await expect(
